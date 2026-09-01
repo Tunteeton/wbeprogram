@@ -1,11 +1,32 @@
-const button = document.getElementById('clickBtn');
+
 const message = document.getElementById('message');
-const count = document.getElementById('count');
+const myButton = document.getElementById('my-button');
+const heading = document.querySelector('h1');
+const Addbutton = document.getElementById('Add-data');
+const userInput = document.getElementById('user-input');
+const myList = document.getElementById('my-list');
 
-let clicks = 0;
-
-button.addEventListener('click', () => {
-  clicks += 1;
-  count.textContent = clicks;
-  message.textContent = `You clicked the button ${clicks} time(s)!`;
+myButton.addEventListener('click', () => {
+  heading.textContent = "Moi maailma";
+  console.log("Hello world");
 });
+
+Addbutton.addEventListener('click', () => {
+  inputData();
+});
+
+function inputData() {
+  const text = userInput.value;
+  
+  if (text === '') {
+    alert('Please enter text!');
+    return;
+  }
+  
+  const listItem = document.createElement('li');
+  listItem.textContent = text;
+  myList.appendChild(listItem);
+  
+  userInput.value = '';
+  userInput.focus();
+}

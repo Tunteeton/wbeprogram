@@ -3,7 +3,7 @@ const message = document.getElementById('message');
 const myButton = document.getElementById('my-button');
 const heading = document.querySelector('h1');
 const Addbutton = document.getElementById('Add-data');
-const userInput = document.getElementById('user-input');
+const textArea = document.getElementById('text-area');
 const myList = document.getElementById('my-list');
 
 myButton.addEventListener('click', () => {
@@ -16,10 +16,10 @@ Addbutton.addEventListener('click', () => {
 });
 
 function inputData() {
-  const text = userInput.value;
+  const text = textArea.value;
   
   if (text === '') {
-    alert('Please enter text!');
+    alert('kirjoita jotain!');
     return;
   }
   
@@ -27,6 +27,6 @@ function inputData() {
   listItem.textContent = text;
   myList.appendChild(listItem);
   
-  userInput.value = '';
-  userInput.focus();
+  textArea.value = '';
+  textArea.focus();
 }

@@ -2,7 +2,7 @@
 const message = document.getElementById('message');
 const myButton = document.getElementById('my-button');
 const heading = document.querySelector('h1');
-const Addbutton = document.getElementById('Add-data');
+const addButton = document.getElementById('add-data');
 const textArea = document.getElementById('text-area');
 const myList = document.getElementById('my-list');
 
@@ -11,7 +11,7 @@ myButton.addEventListener('click', () => {
   console.log("Hello world");
 });
 
-Addbutton.addEventListener('click', () => {
+addButton.addEventListener('click', () => {
   inputData();
 });
 
